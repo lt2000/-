@@ -1,0 +1,325 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\begin{document}
+	\section{插值}
+	\paragraph{1.}
+	\begin{displaymath}
+		l_0(x)=\frac{(x-2)(x-3)}{(-1-2)(-1-3)}=\frac{1}{12}(x^{2}-5x+6)
+	\end{displaymath}
+	\begin{displaymath}
+		l_1(x)=\frac{(x+1)(x-3)}{(2+1)(2-3)}=-\frac{1}{3}(x^{2}-2x-3)
+	\end{displaymath}
+	\begin{displaymath}
+		l_2(x)=\frac{(x+1)(x-2)}{(3+1)(3-2)}=\frac{1}{4}(x^{2}-x-2)
+	\end{displaymath}
+	\begin{displaymath}
+		L_2(x)=\frac{1}{4}(x^{2}-5x+6)-\frac{5}{3}(x^{2}-2x-3)+\frac{7}{4}(x^{2}-x-2)=\frac{1}{3}x^{2}+\frac{1}{3}x+3
+	\end{displaymath}
+	\begin{displaymath}
+		L_2(0)=3 
+	\end{displaymath}
+
+	\paragraph{2.}
+		\begin{displaymath}
+		\begin{aligned}
+			&l_0(x)=\frac{(x-2)(x-5)}{(-2-2)(-2-5)}=\frac{1}{28}(x^{2}-7x+10)\\ 
+			&l_1(x)=\frac{(x+2)(x-5)}{(2+2)(x-5)}=-\frac{1}{12}(x^2-3x-10)\\
+			&l_2(x)=\frac{(x+2)(x-2)}{5+2)(5-2)}=\frac{1}{21}(x^2-4)\\
+			\\
+			&L_0(x)=\frac{1}{28}x^2+\frac{3}{4}x+\frac{19}{14}\\
+			&L_2(-1.2)=\frac{89}{175}=0.5086\\
+			&L_2(1.2)=\frac{404}{175}=2.3086
+		\end{aligned}
+		\end{displaymath}
+	
+	\paragraph{3.}
+		\subparagraph{(1).}
+			\begin{displaymath}
+			\begin{aligned}
+				&l_0(x)=\frac{x(x-\frac{1}{2})(x-1)}{-1\times(-1-\frac{1}{2})(-1-1)}=-\frac{1}{3}(x^3-\frac{3}{2}x^2+\frac{1}{2}x)\\
+				&l_1(x)=\frac{(x+1)(x-\frac{1}{2})(x-1)}{\frac{1}{2}}=2(x^3-\frac{1}{2}x^2-x+\frac{1}{2})\\
+				&l_2(x)=\frac{(x+1)x(x-1)}{\frac{3}{2}\times\frac{1}{2}\times-\frac{1}{2}}=-\frac{8}{3}(x^3-x)\\
+				&l_3(x)=\frac{(x+1)x(x-\frac{1}{2})}{1}=x^3+\frac{1}{2}x^2-\frac{1}{2}x\\
+				&L_3(x)=-x^3+\frac{5}{2}x^2-\frac{1}{2}
+			\end{aligned}
+			\end{displaymath}
+		\subparagraph{(2).}
+			\begin{displaymath}
+			\begin{aligned}
+				&l_0(x)=-\frac{1}{12}(x^3-5x^2+6x)\\
+				&l_1(x)=\frac{1}{6}(x^3-4x^2+x+6)\\
+				&l_2(x)=-\frac{1}{6}(x^3-2x^2-3x)\\
+				&l_3(x)=\frac{1}{12}(x^3-x^2-2x)\\
+				&L_3(x)=-\frac{1}{3}x^3+\frac{11}{12}x^2-x
+			\end{aligned}
+			\end{displaymath}
+	
+	\paragraph{4.}
+		不会
+		
+	\paragraph{5.}
+		\begin{displaymath}
+		\begin{aligned}
+			&l_0(x)=\frac{1}{760}(x^2-221x+12100)\\
+			&l_1(x)=-\frac{1}{399}(x^2-202x+9801)\\
+			&l_2(x)=\frac{1}{840}(x^2-181x+8100)\\
+			\\
+			&L_2(x)=-\frac{1}{7980}x^2+\frac{601}{7980}x+\frac{495}{133}\\
+			&L_2(105)=\frac{1363}{133}=10.2481\\
+			\sqrt{105}\approx10.2469\\
+		\end{aligned}
+		\end{displaymath}
+		误差界=$$R_n(x)\leq\frac{(\sqrt{\xi})'''}{3!}(x-81)(x-100)(x-121)\qquad\xi\in[81,121]$$
+		所以$$R_n(105)\in\lbrack\frac{-120}{161051},\frac{-40}{19687}\rbrack$$
+				
+	\paragraph{6.}
+		如下表：
+		\begin{table}[h]
+			\centering
+			\begin{tabular}{|c|c|c|c|c|c|}\hline
+				i&$x_i$&$f(x_i)$&一阶&二阶&三阶\\\hline
+				0&-1&3&&&\\
+				1&2&5&$\frac{2}{3}$&&\\
+				2&3&7&2&$\frac{1}{3}$&\\
+				3&4&5&-2&-2&$-\frac{7}{15}$\\\hline
+			\end{tabular}
+		\end{table}
+		\begin{displaymath}
+		\begin{aligned}
+			N_3(x)=-\frac{7}{15}x^3+\frac{11}{5}x^2-\frac{2}{15}x+\frac{1}{5}\\
+			f(1.2)\approx N(1.2)=\frac{1501}{625}=2.4016
+		\end{aligned}
+		\end{displaymath}
+	
+	\paragraph{7.}
+		\begin{displaymath}
+		\begin{aligned}
+			N_3(x)&=1+(x-4)\times2+(x-1)(x-4)+(x-1)(x-4)(x-3)\times-1\\
+				  &=1+2x-8+x^2-5x+4-x^3+8x^2-19x+12\\
+				  &=-x^3+9x^2-22x+9\\
+			&f(2)\approx N_3(2)=-7\\
+			&[1,2,3,4]=\frac{f[1,3,4]-f[2,3,4]}{1-2}=-1\\
+			&\Rightarrow f[2,3,4]=0
+		\end{aligned}
+		\end{displaymath}
+	
+	\paragraph{8.}
+		\begin{displaymath}
+		\begin{aligned}
+			&\epsilon \le 10^{-5}\\
+			&M_2=\max \limits_{a\leq x\leq b}|f''(x)|=1\\
+			&|f(x)-p(x)|=\frac{M_2}{8}(x_{i+1}-x_i)^2\leq 10^{-5}\\
+			&\Delta x\leq \sqrt{8\times 10^{-5}} \approx 9\times 10^{-3}\\
+		\end{aligned}
+		\end{displaymath}
+	
+	\paragraph{9.}
+		\begin{displaymath}
+		\begin{aligned}
+			&f[2^0, 2^1]=\frac{f(1)-f(2)}{1-2}=-2975+886=-2089\\
+			&f[2^0, 2^1, ..., 2^7]=1\\
+			&f[2^0, 2^1, ..., 2^8]=0\\
+		\end{aligned}
+		\end{displaymath}
+	
+	\paragraph{10.}
+		\begin{equation}
+			p(x)=\left\{
+				\begin{array}{lr}
+					1.6x+0.44,&1.05\leq x \leq 1.10\\
+					-0.6x+2.86,&1.1\leq x \leq 1.15\\
+					3x-1.28,&1.15\leq x\leq 1.2
+				\end{array}
+			\right.
+		\end{equation}
+		$\qquad f(1.075)=2.16\\
+		\qquad f(1.175)=2.245\\$
+		
+	\paragraph{11.}
+		$P_2(x)=f(0)h_0(x)+f(1)h_1(x)+f'(1)g_1(x)\\$
+		\begin{displaymath}
+		\begin{aligned}
+			h_0(0)=1\qquad&h_0(1)=0\qquad&h_0'(1)=0\\
+			h_1(0)=0\qquad&h_1(1)=1\qquad&h_1'(1)=0\\
+			g_1(0)=0\qquad&g_1(1)=0\qquad&g_1'(1)=1
+		\end{aligned}
+		\end{displaymath}
+		\begin{displaymath}
+		\begin{aligned}
+			&h_0(x)=(x-1)^2\\
+			&h_1(x)=-x(x-2)\\
+			&g_1(x)=x(x-1)
+		\end{aligned}
+		\end{displaymath}
+		$P_2(x)=f(0)(x-1)^2-f(1)x(x-2)+f'(1)x(x-1)\\$
+		$R_2(x)=\frac{f^{(3)}(\xi)}{3!}(x-0)(x-1)^2\\$
+		
+	\paragraph{12.}
+		$P_2(x)=f(3)h_0(x)+f(5)h_1(x)+f'(5)g_2(x)\\$
+		\begin{displaymath}
+		\begin{aligned}
+			h_0(3)=1\qquad&h_0(5)=0\qquad&h_0'(5)=0\\
+			h_1(3)=0\qquad&h_1(5)=1\qquad&h_1'(5)=0\\
+			g_2(3)=0\qquad&g_2(5)=0\qquad&g_2'(5)=1
+		\end{aligned}
+		\end{displaymath}
+		\begin{displaymath}
+		\begin{aligned}
+			&h_0(x)=\frac{1}{4}x^2-\frac{5}{2}x+\frac{25}{4}\\
+			&h_1(x)=-\frac{1}{4}x^2+\frac{5}{2}x-\frac{21}{4}\\
+			&g_1(x)=\frac{1}{2}x^2-4x+\frac{15}{2}
+		\end{aligned}
+		\end{displaymath}
+		$P_2(x)=x^2-3x+5\\$
+		$R_2(x)=\frac{f^{(3)}(\xi)}{3!}(x-3)(x-5)^2\\$
+		$f(3.7)\approx P_2(3.7)=7.59$
+		
+	\paragraph{13.}
+		$P_3(x)=f(0)h_0(x)+f(1)h_1(x)+f(3)h_2(x)+f'(3)g_3(x)\\$
+		\begin{displaymath}
+			\begin{aligned}
+				h_0(0)=1\quad&h_0(1)=0\quad&h_0(3)=0\quad&h_0'(3)=0\\
+				h_1(0)=0\quad&h_1(1)=1\quad&h_1(3)=0\quad&h_1'(3)=0\\
+				h_2(0)=0\quad&h_2(1)=0\quad&h_2(3)=1\quad&h_2'(3)=0\\
+				g_3(0)=0\quad&g_3(1)=0\quad&g_3(3)=0\quad&g_3'(3)=1\\
+			\end{aligned}
+		\end{displaymath}
+		解得：
+		\begin{displaymath}
+			\begin{aligned}
+				&h_0(x)=-\frac{1}{9}x^3+\frac{7}{9}x^2-\frac{5}{3}x+1\\
+				&h_1(x)=\frac{1}{4}x^3-\frac{3}{2}x^2+\frac{9}{4}x\\
+				&h_2(x)=-\frac{5}{36}x^3+\frac{13}{18}x^2-\frac{7}{12}x\\
+				&g_3(x)=\frac{1}{6}x^3-\frac{2}{3}x^2+\frac{1}{2}x\\
+			\end{aligned}
+		\end{displaymath}
+		$P_3(x)=f(0)h_0(x)+...\\$
+		$R_4(x)=\frac{f^(4)(\xi)}{4!}x(x-1)(x-3)^2$
+		
+	\paragraph{14.}
+		代入13题的结果：
+		$P_3(x)=\frac{27}{200}x^3-\frac{27}{50}x^2+\frac{31}{200}x+1$
+	
+	\paragraph{15.}
+		$P_4(x)=f(1)h_0(x)+f(2)h_1(x)+f'(1)g_2(x)+f'(2)g_3(x)+f''(2)l_4(x)\\$
+		\begin{displaymath}
+		\begin{aligned}
+			h_0(1)=1\quad&h_0(2)=0\quad&h_0'(1)=0\quad&h_0'(2)=0\quad&h_0''(2)=0\\
+			h_1(1)=0\quad&h_1(2)=1\quad&h_1'(1)=0\quad&h_1'(2)=0\quad&h_1''(2)=0\\
+			g_2(1)=0\quad&g_2(2)=0\quad&g_2'(1)=1\quad&g_2'(2)=0\quad&g_2''(2)=0\\
+			g_3(1)=0\quad&g_3(2)=0\quad&g_3'(1)=0\quad&g_3'(2)=1\quad&g_3''(2)=0\\
+			l_4(1)=0\quad&l_4(2)=0\quad&l_4'(1)=0\quad&l_4'(2)=0\quad&l_4''(2)=1\\
+		\end{aligned}
+		\end{displaymath}
+		解得：
+		\begin{displaymath}
+		\begin{aligned}
+			&h_0(x)=-3x^4+20x^3-48x^2+48x-16\\
+			&h_1(x)=3x^4-20x^3+48x^2-48x+17\\
+			&g_2(x)=-x^4+7x^3-18x^2+20x-8\\
+			&g_3(x)=-2x^4+13x^3-30x^2+29x-10\\
+			&l_4(x)=\frac{1}{2}x^4-3x^3+\frac{13}{2}x^2-6x+2
+		\end{aligned}
+		\end{displaymath}
+		$P_4(x)=\frac{7}{2}x^4-\frac{45}{2}x^3+\frac{103}{2}x^2-49x+17\\$
+		$R_4(x)=\frac{f^(5)(\xi)}{5!}(x-1)^2(x-2)^3$
+		
+	\paragraph{16.}
+		$h_0=1\quad h_1=2\quad h_2=1\\$
+		\begin{equation}
+			\left\{
+				\begin{array}{lr}
+					\lambda_1=\frac{2}{3}&\\
+					\mu_1=\frac{1}{3}&
+				\end{array}
+			\right.
+		\end{equation}
+		\begin{equation}
+			\left\{
+				\begin{array}{lr}
+					\lambda_2=\frac{1}{3}&\\
+					\mu_2=\frac{2}{3}&
+				\end{array}
+			\right.
+		\end{equation}
+		$\qquad d_1=-12\quad d_2=12\\$
+		\begin{displaymath}
+		\begin{gathered}
+		\begin{bmatrix}
+			2 & \frac{2}{3} \\ \frac{2}{3} & 2
+		\end{bmatrix}
+		\begin{bmatrix}
+			M_1 \\ M_2
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			-12 \\ 12
+		\end{bmatrix}
+		\end{gathered}
+		\end{displaymath}
+		$\qquad \Rightarrow M_1=-9,\qquad M_2=9\\$
+		\begin{equation}
+			S(x)=\left\{
+				\begin{array}{lr}
+					-\frac{3}{2}(x+2)^3+4(x+1)+3(x+2)+\frac{3}{2}(x+2)&\\
+					\frac{3}{2}x^3-\frac{1}{2}x+4&\\
+					\frac{3}{2}(2-x)^3+\frac{17}{2}x-5&
+				\end{array}
+			\right.
+		\end{equation}
+	
+	\paragraph{17.}
+		$h_0=1,\quad h_1=1, \quad h_2=2\\$
+		\begin{equation}
+			\left\{
+			\begin{array}{lr}
+				\lambda_1=\frac{1}{2}&\\
+				\mu_1=\frac{1}{2}&
+			\end{array}
+			\right.
+		\end{equation}
+		\begin{equation}
+			\left\{
+			\begin{array}{lr}
+				\lambda_2=\frac{2}{3}&\\
+				\mu_2=\frac{1}{3}&
+			\end{array}
+			\right.
+		\end{equation}
+		$d_1=3(\frac{4-3}{1}-\frac{3-2}{1})=0\\$
+		$d_2=2(\frac{29-4}{2}-\frac{4-3}{1})=29-4-1=24\\$
+		$d_0=6(1-5)=-24\\$
+		$d_3=3(29-\frac{25}{2})=\frac{99}{2}\\$
+		\begin{displaymath}
+		\begin{gathered}
+			\begin{bmatrix}
+				2 & 1 & & \\
+				\frac{1}{2} & 2 & \frac{1}{2} & \\
+				 & \frac{1}{3} & 2 & \frac{2}{3} \\
+				 & & 1 & 2
+			\end{bmatrix}
+			\begin{bmatrix}
+				M_0\\M_1\\M_2\\M_3
+			\end{bmatrix}
+			=
+			\begin{bmatrix}
+				-24\\0\\24\\\frac{99}{2}
+			\end{bmatrix}
+		\end{gathered}
+		\end{displaymath}
+		\begin{displaymath}
+		\begin{gathered}
+		\begin{bmatrix}
+			M_0\\M_1\\M_2\\M_3
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			-13.14\\
+			2.273\\
+			4.045\\
+			22.722
+		\end{bmatrix}
+		\end{gathered}
+		\end{displaymath}
+		后面不算了
+\end{document}
