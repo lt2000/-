@@ -1,0 +1,320 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\begin{document}
+	\section{最小二乘拟合}
+	\paragraph{1.}
+	$p(x)=a_0+a_1x$
+	\begin{displaymath}
+	\begin{gathered}
+		\begin{bmatrix}
+			5 & 16600\\
+			16600 & 59740000
+		\end{bmatrix}
+		\begin{bmatrix}
+			a_0\\
+			a_1
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			28.3\\
+			83520
+		\end{bmatrix}
+	\end{gathered}
+	\end{displaymath}
+	$p(x)=13.1465-2.255\times 10^{-3}$
+	
+	\paragraph{2.}
+	$p(x)=a_0+a_1x$
+	\begin{displaymath}
+		\begin{aligned}
+			&\int_{-1}^{1}(a_0+a_1x-\sin x)^2dx\\
+			=&\int_{-1}^{1}(a_0^2+a_1x^2+2a_0a_1x+\sin ^2x-2a_0\sin x-2a_1 x\sin x)dx\\
+			=&2a_0^2+\frac{2a_1^2}{3}+1-\frac{\sin 2}{2}+4a_1\cos 1-4a_1\sin 1
+		\end{aligned}
+	\end{displaymath}
+	\begin{displaymath}
+	\begin{aligned}
+		\frac{\delta Q}{\delta a_0}&=4a_0=0\\
+		\frac{\delta Q}{\delta a_1}&=\frac{4}{3}a_1+4\cos 1-4\sin 1=0
+	\end{aligned}
+	\end{displaymath}
+	$a_0=0\qquad a_1=2(\sin 1-\cos 1)$
+	
+	\paragraph{3.}
+	\begin{displaymath}
+	\begin{gathered}
+		\begin{bmatrix}
+			5 & -0.5\\
+			-0.5 & \frac{15}{8}
+		\end{bmatrix}
+		\begin{bmatrix}
+			a_0\\
+			a_1
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			9.32\\
+			2.855
+		\end{bmatrix}
+		\\
+		\begin{bmatrix}
+			a_0\\
+			a_1
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			2.0715\\
+			2.0751
+		\end{bmatrix}		
+	\end{gathered}
+	\end{displaymath}
+	$\varphi_1(x)=2.0715+2.0751x\\$
+	最小平方误差=0.1476356188
+	
+	\begin{displaymath}
+	\begin{gathered}
+		\begin{bmatrix}
+			5 & -0.5 & \frac{15}{8}\\
+			-0.5 & \frac{15}{8} & \frac{25}{8}\\
+			\frac{15}{8} & \frac{25}{16} & \frac{177}{128}
+		\end{bmatrix}
+		\begin{bmatrix}
+			a_0\\a_1\\a_2
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			9.32\\2.855\\2.71375
+		\end{bmatrix}
+		\\
+		\begin{bmatrix}
+			a_0\\a_1\\a_2
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			-9.6945\times 10^{-3}\\-2.163\\4.4197
+		\end{bmatrix}
+	\end{gathered}
+	\end{displaymath}
+	$\varphi_2(x)=4.4197x^2-2.163x-9.6945\times 10^{-3}\\$
+	最小二乘误差=62.6693
+	
+	\paragraph{4.}
+	\begin{displaymath}
+	\begin{gathered}
+		\begin{bmatrix}
+			5 & 0 & 34\\
+			0 & 34 & 36\\
+			34 & 36 & 370
+		\end{bmatrix}
+		\begin{bmatrix}
+			a_0\\a_1\\a_2
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			58.3\\43.2\\563
+		\end{bmatrix}
+		\\
+		\begin{bmatrix}
+			a_0\\a_1\\a_2
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			3.5\\0\\1.2
+		\end{bmatrix}
+	\end{gathered}
+	\end{displaymath}
+	$\varphi(x)=1.2x^2+3.5$
+	
+	\paragraph{5.}
+	$Q(x)=3.5821a^2+0.4179b^2+2.2750ab-7.5016a-2.0438b+4.4324\\$
+	\begin{equation}
+		\left\{
+			\begin{array}{lr}
+				2\times 3.5821a+2.2750b-7.5016&=0\\
+				2\times 0.4179b+2.2750a-2.0438&=0
+			\end{array}
+		\right.
+	\end{equation}
+	$a=1.9948\qquad b=-2.9846\\$
+	$\varphi(x)=1.9948\cos x-2.9846\sin x$
+	
+	\paragraph{6.}
+	$y=ae^{bx} \Leftrightarrow \ln y=\ln a+bx, set z = \ln y\\$
+	\begin{displaymath}
+	\begin{gathered}
+		\begin{bmatrix}
+			1 & 1 & 1 & 1\\
+			0.7 & 0.5 & 0.25 & 0.75
+		\end{bmatrix}
+		\begin{bmatrix}
+			1 & 0.7\\
+			1 & 0.5\\
+			1 & 0.25\\
+			1 & 0.75
+		\end{bmatrix}
+		\begin{bmatrix}
+			A\\B
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			1 & 1 & 1 & 1\\
+			0.7 & 0.5 0.25 & 0.75
+		\end{bmatrix}
+		\begin{bmatrix}
+			\ln(0.99)\\\ln(1.21)\\\ln(2.57)\\\ln(4.23)
+		\end{bmatrix}
+		\\
+		\begin{bmatrix}
+			4 & 2.2\\
+			2.2 & 1.365
+		\end{bmatrix}
+		\begin{bmatrix}
+			A\\B
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			2.56667\\1.4059
+		\end{bmatrix}
+		\\
+		\begin{bmatrix}
+			A\\B
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			0.66213\\-0.03722
+		\end{bmatrix}
+	\end{gathered}
+	\end{displaymath}
+	$\ln a=0.66214\qquad a=1.9389\\$
+	$y=1.9389e^{-0.03722x}$
+	
+	\paragraph{7.}
+	\begin{displaymath}
+		\begin{aligned}
+		Q(x)&=\sum_{i=1}^{m}(x_i-ay_i-bx_iy_i)^2\\
+		   &=\sum_{i=1}^{m}(ay_i+bx_iy_i-x_i)^2
+		\end{aligned}
+	\end{displaymath}
+	\begin{displaymath}
+	\begin{gathered}
+		A=
+		\begin{bmatrix}
+			0.6087 & 1.2783\\
+			0.6849 & 1.7122\\
+			0.7369 & 2.0630\\
+			0.8111 & 2.5955
+		\end{bmatrix}
+		Y=
+		\begin{bmatrix}
+			2.1\\2.5\\2.8\\3.2
+		\end{bmatrix}
+		\\\Rightarrow
+		\begin{bmatrix}
+			2.0403 & 5.5761\\
+			5.5761 & 15.5586
+		\end{bmatrix}
+		\begin{bmatrix}
+			a\\b
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			7.6491\\21.0472
+		\end{bmatrix}
+	\end{gathered}
+	\end{displaymath}
+	$a=2.52622\qquad b=0.4474\\$
+	$f(x)=\frac{x}{2.5262+0.4474x}$
+	
+	\paragraph{8.}
+	\subparagraph{(1).}
+	\begin{displaymath}
+	\begin{gathered}
+		\begin{bmatrix}
+			1 & 2 & 1\\
+			2 & 1 & 1
+		\end{bmatrix}
+		\begin{bmatrix}
+			1 & 2\\
+			2 & 1\\
+			1 & 1
+		\end{bmatrix}
+		\begin{bmatrix}
+			x_1\\x_2
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			1 & 2 & 1\\
+			2 & 1 & 1
+		\end{bmatrix}
+		\begin{bmatrix}
+			5\\6\\4
+		\end{bmatrix}
+		\\
+		\begin{bmatrix}
+			6 & 5\\
+			5 & 6
+		\end{bmatrix}
+		\begin{bmatrix}
+			x_a\\x_2
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			21\\20
+		\end{bmatrix}
+		\\
+		\begin{bmatrix}
+			x_1\\x_2
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			\frac{26}{11}\\\frac{15}{11}
+		\end{bmatrix}
+	\end{gathered}
+	\end{displaymath}
+
+	\subparagraph{(2).}
+		\begin{displaymath}
+		\begin{gathered}
+			\begin{bmatrix}
+				1 & 1 & 2 & 1\\
+				-2 & 5 & 1 & 1
+			\end{bmatrix}
+			\begin{bmatrix}
+				1 & -2\\
+				1 & 5\\
+				2 & 1\\
+				1 & 1
+			\end{bmatrix}
+			\begin{bmatrix}
+				x_1\\x_2
+			\end{bmatrix}
+			=
+			\begin{bmatrix}
+				1 & 1 & 2 & 1\\
+				-2 & 5 & 1 & 1
+			\end{bmatrix}
+			\begin{bmatrix}
+				1\\13.1\\7.9\\5.1
+			\end{bmatrix}
+			\\
+			\begin{bmatrix}
+				7 & 6\\
+				6 & 31
+			\end{bmatrix}
+			\begin{bmatrix}
+				x_1\\x_2
+			\end{bmatrix}
+			=
+			\begin{bmatrix}
+				35\\76.5
+			\end{bmatrix}
+			\\
+			\begin{bmatrix}
+				x_1\\x_2
+			\end{bmatrix}
+			\begin{bmatrix}
+				3.4586\\1.7983
+			\end{bmatrix}
+		\end{gathered}
+		\end{displaymath}
+\end{document}
