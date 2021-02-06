@@ -1,0 +1,123 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\begin{document}
+	\section{非线性方程求解}
+	\paragraph{1.}
+		$\varphi ' (x)=\cos x\qquad |\varphi ' (x)|< 1 \qquad x\in [0, 2]\\$
+		\begin{displaymath}
+		\begin{aligned}
+			x_0&=1&&\\
+			x_1&=1.341471\qquad &\Delta&=0.341471\\
+			x_2&=1.47382\qquad  &\Delta&=0.132349\\
+			x_3&=1.495301\qquad &\Delta&=0.021481\\
+			x_4&=1.4971516\qquad&\Delta&=0.0018506\\
+			x_5&=1.4972895\qquad&\Delta&=0.0001379<10^{-3}\\
+		\end{aligned}
+		\end{displaymath}
+	
+	\paragraph{2.}
+		\subparagraph{(1).}
+		\begin{displaymath}
+			\begin{aligned}
+			&x=\frac{2}{19}x^3-\frac{5}{19}x^2+\frac{42}{19}\\
+			&\varphi'(x)=\frac{6}{19}x^2-\frac{10}{19}x\\
+			&\varphi'(3)=1.26>1
+			\end{aligned}
+		\end{displaymath}
+		\qquad\qquad\qquad 不收敛
+				
+		\subparagraph{(2).}
+		\begin{displaymath}
+			\begin{aligned}
+			&x=\sqrt{\frac{2}{5}x^3-\frac{19}{5}x+\frac{42}{5}}\\
+			&\varphi'(x)=\frac{\frac{6}{5}x^2-\frac{19}{5}}{2\sqrt{\frac{2}{5}x^3-\frac{19}{5}x+\frac{42}{5}}}\\
+			&\varphi'(3)=\frac{7\sqrt{195}}{78}=1.2532>1				
+			\end{aligned}
+		\end{displaymath}
+	
+		\subparagraph{(3).}
+		\begin{displaymath}
+			\begin{aligned}
+			&x=\sqrt[3]{\frac{5}{2}x^2+\frac{19}{2}x-21}\\
+			&\varphi'(x)=\frac{5x+\frac{19}{2}}{(\frac{5}{2}x^2+\frac{19}{2}x-21)^{\frac{2}{3}}}\\
+			&\varphi'(3)=2.53757>1
+			\end{aligned}
+		\end{displaymath}
+	
+	\paragraph{3.}
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|}\hline
+			k&x&f(x)&求解区间&$\Delta$x\\\hline
+			0&0&-1&&\\
+			1&1&1&$[-1,1]$&\\
+			2&$\frac{1}{2}$&$-\frac{5}{8}$&$[\frac{1}{2},1]$&$\frac{1}{2}$\\
+			3&$\frac{3}{4}$&-$\frac{1}{64}$&$[\frac{3}{4},1]$&$\frac{1}{4}$\\
+			4&$\frac{7}{8}$&$\frac{223}{512}$&$[\frac{3}{4},\frac{7}{8}]$&$\frac{1}{8}$\\
+			...&...&...&...&...\\
+			11&$\frac{773}{1024}$&1.6567$\times10^{-5}$&$[\frac{193}{256},\frac{773}{1024}]$&$\frac{1}{1024}$\\\hline
+		\end{tabular}
+	\end{table}
+
+	\paragraph{4.}
+	\begin{displaymath}
+	\begin{aligned}
+		&x_0=4&&\\
+		&x_1=\frac{27}{8}\qquad&\Delta&=\frac{5}{8}\\
+		&x_2=\frac{1433}{432}\qquad&\Delta&=\frac{25}{432}\\
+		&x_3=3.3166248\qquad&\Delta&=5.048296^{-4}\\
+		&x_4=3.3166248\qquad&\Delta&=1.9\times 10^{-7}
+	\end{aligned}
+	\end{displaymath}
+
+	\paragraph{5.}
+	设$f(x)=x^n-x$，则即为求f(x)零点\\
+	迭代公式$x_{k+1}=x_k-\frac{x_k^n-\alpha}{nx_k^{n-1}}\\$
+	\begin{displaymath}
+	\begin{aligned}
+		&x_0=2\\
+		&x_1=\frac{137}{80}\\
+		&x_2=1.57929\\
+		&x_3=1.552783\\
+		&x_4=1.55184467\\
+		&x_5=1.55184557
+	\end{aligned}
+	\end{displaymath}
+
+	\paragraph{6.}
+	\[
+	\begin{split}
+		&\varphi'(x)=\frac{(x^3-3x-2)(6x)}{(3x^2-3)^2}\\
+		&\varphi'(1.5)=|-2|>1\\
+		&\varphi(x)=x-\frac{x^3-3x-2}{3x^2-3}
+	\end{split}
+	\]
+	\[
+	\begin{split}
+		&x_0=1.5\\
+		&x_1=\frac{7}{3}\\
+		&x_2=\frac{37}{18}\\
+		&x_3=\frac{1027}{513}\\
+		&x_4=\frac{791047}{395523}\\
+		&x_5=2
+	\end{split}
+	\]
+	
+	\paragraph{7.}
+	\[
+	\begin{split}
+		&x_0=1\\
+		&x_1=3\\
+		&x_2=\frac{7}{5}\\
+		&x_3=\frac{32}{19}\\
+		&x_4=\frac{4649}{2083}\\
+		&x_5=1.94949\\
+		&x_6=1.992856\\
+		&x_7=2.000247664\\
+		&x_8=1.999998816
+	\end{split}
+	\]
+	
+	\paragraph{8.}
+		这题我算了半天没算的出来...
+\end{document}
